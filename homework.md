@@ -13,3 +13,7 @@
    eg.: server.use("abc\*dsa") or server.use("abc+dsa") or server.use("abc/dsa") or server.use(/xyz/).
 
    ## Do experiment with most possible combinations.
+
+5. Read about query params in the routes.
+
+6. Read about dynamic routes.
