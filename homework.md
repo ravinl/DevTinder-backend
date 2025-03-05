@@ -6,3 +6,10 @@
    c. Delete
    d. Put
    e. Patch
+
+3. Read about Regular Expression.
+
+4. How regular expressions works in routing.
+   eg.: server.use("abc\*dsa") or server.use("abc+dsa") or server.use("abc/dsa") or server.use(/xyz/).
+
+   ## Do experiment with most possible combinations.
