@@ -7,5 +7,3 @@ res.send("First route handler");
 }, (req, res) => {
 res.send("Second route handler");
 })
-
-## When and why we should use multiple routes?
