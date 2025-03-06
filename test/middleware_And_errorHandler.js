@@ -41,6 +41,30 @@ app.use(
   }
 ); // for this path '/middleware' the second route handler will be executed because in the first handler a middleware named 'next()' is being used, which will allow the control to get into the second route handler.
 
+app.use("/canon", (req, res, next) => {
+  console.log("Canon handler-1");
+  next();
+});
+
+app.get(
+  "/canon",
+  (req, res, next) => {
+    console.log("Canon handler-2");
+    next();
+  },
+  (req, res, next) => {
+    console.log("Canon handler-3");
+    next();
+  },
+  (req, res, next) => {
+    console.log("Canon handler-4");
+    next();
+  },
+  (req, res) => {
+    res.send("canon response");
+  }
+);
+
 app.listen(19777, () => {
   console.log("Server is listening successfully on port 19777");
 });
