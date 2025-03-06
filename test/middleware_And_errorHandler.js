@@ -29,6 +29,18 @@ app.use(
   }
 ); // for this path '/test' the first route handler will execute and will be caught in loop because the first route handler is not sending any response.
 
+app.use(
+  "/middleware",
+  (req, res, next) => {
+    console.log("1st middleware request handler");
+    next();
+  },
+  (req, res) => {
+    console.log("2nd middleware request handler");
+    res.send("Hello from the middleware server-2");
+  }
+); // for this path '/middleware' the second route handler will be executed because in the first handler a middleware named 'next()' is being used, which will allow the control to get into the second route handler.
+
 app.listen(19777, () => {
   console.log("Server is listening successfully on port 19777");
 });
