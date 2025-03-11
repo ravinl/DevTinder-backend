@@ -4,11 +4,6 @@ const jobRole = {
   "Cyber Security": ["Ethical Hacking", "Penetrate Testing"],
   "Data Scientist": ["Machine Learning", "Deep Learning"],
 };
-
-// TODO: Correct the logic to --> select the title and specialty according to title
-const jobTitle = Object.keys(jobRole);
-const jobSpecialty = Object.values(jobRole);
-
 const programmingLanguage = [
   "C language",
   "C++",
@@ -19,7 +14,6 @@ const programmingLanguage = [
   "JavaScript",
   "TypeScript",
 ];
-
 const topics = [
   "Data Structure",
   "Algorithms",
@@ -32,13 +26,16 @@ const topics = [
   "MongoDB",
   "Spring",
 ];
-
 const relationshipInterest = [
   "Only to explore",
   "Find coding partner",
   "Find coding team",
   "Still figuring out",
 ];
+
+// TODO: Correct the logic to --> select the title and specialty according to title
+const jobTitle = Object.keys(jobRole);
+const jobSpecialty = Object.values(jobRole);
 
 module.exports = {
   jobTitle,
