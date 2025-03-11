@@ -1,7 +1,7 @@
 const express = require("express");
 
 const server = express();
-const PORT = 19777;
+const PORT = process.env.PORT;
 
 const listenServer = () => {
   server.listen(PORT, () => {
