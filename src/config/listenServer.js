@@ -9,4 +9,4 @@ const listenServer = () => {
   });
 };
 
-module.exports = { listenServer };
+module.exports = { listenServer, server };
